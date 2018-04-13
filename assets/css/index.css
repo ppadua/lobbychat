@@ -1,0 +1,296 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#room_list{
+	width: 77%;
+	border: 1px solid;
+	display: inline-block;
+	height: 500px;
+}
+
+#user_list{
+	border: 1px solid;
+    width: 17%;
+    display: inline-block;
+    vertical-align: top;
+    height: 480px;
+    padding: 10px;
+}
+#user_list ul{
+    height: 415px;
+    overflow-y: scroll;
+}
+#user_list li{
+    padding: 5px;
+}
+
+table{
+	border-collapse: collapse;
+}
+table ,tr td{
+    padding: 10px;
+}
+tbody {
+    display:block;
+    height: 50vh;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+thead {
+    width: calc( 100% - 1em );
+}
+
+thead tr{
+    background-color: #CCCCCC;
+    padding: 5px;
+}
+
+table thead tr th{
+    text-align: left;
+	padding: 5px;
+}
+
+table {
+    width:100%;
+}
+table tbody tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+
+table tbody tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+
+
+#create_room{
+	width: 60%;
+}	
+
+#create_room button{
+    width: 100%;
+	height: 40px;
+	margin-left: 40px;
+}	
+#show_create_room_modal{
+	background-color: #2B78E4;
+	border: 1px solid #2B78E4;
+	color : white;
+	font-weight: bold;
+	cursor :pointer;
+}
+#user_list h4{
+	text-align: center;
+}
+.body_modal{
+	width: 300px;
+	height: 175px;
+	border: 1px solid black;
+	position: absolute;
+	left: 35%;
+	top:  35%;
+	background-color: white;
+}
+
+.modal .modal_title{
+	border-bottom: 1px solid black;
+	padding: 5px;
+}	
+
+.modal .modal_body{
+	padding: 10px;
+	height: 80px;
+}
+.modal .modal_body input{
+	padding: 5px;
+	margin: 5px;
+	width: 90%;
+}
+.modal .modal_footer{
+	padding: 10px;
+	border-top: 1px solid black;
+}
+.modal .modal_footer button{
+	padding: 5px 10px;
+}
+.modal .modal_footer .blue_button{
+	float: right;
+	background-color: #2B78E4;
+	color: white;
+	border: 1px solid #2B78E4;
+	cursor: pointer;
+}
+.modal .modal_footer .green_button{
+	float: right;
+	background-color: #009E0F;
+	color: white;
+	border: 1px solid #009E0F;
+	cursor: pointer;
+}
+
+.hidden{
+	display: none !important;
+}
+
+#user_chats{
+	height: 90vh;
+	border: 1px solid black;
+	overflow-y: scroll;
+	/*max-height: 800px;*/
+}
+
+#class_room{
+	width: 78%;
+	display: inline-block;
+}
+#class_room section{
+	padding: 10px;
+}
+#class_room section .user_icon{
+	font-size: 30px;
+	width: 40px;
+	text-align: center;
+	border-radius: 5px;
+	border: 1px solid black;
+	display: inline-block;
+	vertical-align: middle
+}
+#class_room section .user_chat{
+	display: inline-block;
+	vertical-align: middle
+}
+#class_room section .user_chat .class_room_user_name{
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.create_new_user{
+	background-color: #009E0F;
+	color: white;
+	border: 1px solid #009E0F;
+	font-weight: bold;
+}
+
+#class_room .new_joined_user{
+	font-style: italic; text-align: center;
+}
+
+#class_room .leave_user{
+	font-style: italic; text-align: center;
+	color: #999795;
+}
+
+#form_chat{
+	padding: 10px;
+	background-color: silver;
+}
+#form_chat input[type='text']{
+	padding: 10px;
+	width: 79%;
+}
+#form_chat input[type='submit']{
+	padding: 10px;
+	width: 17%;
+}
+
+#class_room_user_list{
+	width: 18%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#class_room_user_list h2{
+	margin-bottom: 10px;
+	text-decoration: underline;
+	white-space: nowrap;
+}
+#class_room_user_list ul{
+    height: 72.9vh;
+    margin-bottom: 40px;
+    overflow-y: scroll;
+}
+
+#class_room_user_list ul li{
+	padding: 5px;
+}
+
+
+.leave{
+    margin-left: 25%;
+    width: 60%;
+}
+.leave button{
+	width: 100%;
+	padding: 10px;
+}
+
+
+.loading, .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+}
+.loading-wheel {
+    width: 20px;
+    height: 20px;
+    margin-top: -40px;
+    margin-left: -40px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    border-width: 30px;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+}
+.style-2 .loading-wheel {
+    border-style: double;
+    border-color: #ccc transparent;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+    }
+}
+
+button, input[type='submit']{
+	cursor: pointer;
+}
+
+.error_input{
+	border : 1px solid red;
+}
+
+.error_message{
+	color: red;
+}
+
+.buttonload {
+    background-color: #4CAF50; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    width: 15%;
+}

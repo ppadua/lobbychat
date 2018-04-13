@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="dashboard" class="hidden">
+            <div id="room_list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Room Name</th>
+                            <th>No. of Users</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="user_list">
+                <h4>User list</h4>
+                <ul></ul>
+                <div id="create_room">
+                    <button id="show_create_room_modal">Create Room</button>
+                </div>
+            </div>
+        </div>
+        <div id="room">
+           
+        </div>
+    </div>
+    <div class="modal hidden" id="create_room_modal">
+        <div class="body_modal">
+            <div class="modal_title">
+                <span>Create Room</span>
+            </div>
+            <div class="modal_body">
+                <form action="">
+                    <input type="text" id="room_name" placeholder="Enter Room Name">
+                    <input type="password" id="room_password" placeholder="Enter Room Password">
+                </form>
+            </div>
+            <div class="modal_footer">
+                <button class="cancel_room">Cancel</button>
+                <button class="create_room green_button">Create Room</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal " id="create_new_user">
+        <div class="body_modal">
+            <div class="modal_title">
+                <span>Enter User Name</span>
+            </div>
+            <div class="modal_body">
+                <form action="">
+                    <input type="text" id="new_user_name" placeholder="e.g. Ryan Bang">
+                </form>
+            </div>
+            <div class="modal_footer">
+                <button class="create_new_user" style="float:right">Enter Lobby</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal hidden" id="enter_password">
+        <div class="body_modal">
+            <div class="modal_title">
+                <span>Enter Room Password</span>
+            </div>
+            <div class="modal_body">
+                <form action="" id="enter_password_submit">
+                    <input type="password"  id="password" placeholder="Enter Room Password">
+                </form>
+            </div>
+            <div class="modal_footer">
+                <button class="cancel_room">Cancel</button>
+                <button class="create_room blue_button">Join Room</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal hidden" id="leave_room">
+        <div class="body_modal">
+            <div class="modal_title">
+                <span>Confirm Leave Room</span>
+            </div>
+            <div class="modal_body">
+               <p>Are you sure you want to leave the chat room?</p>
+            </div>
+            <div class="modal_footer">
+                <button class="cancel_room">Cancel</button>
+                <button class="create_room blue_button">Leave Room</button>
+            </div>
+        </div>
+    </div>
+    <div class="loading style-2 hidden"><div class="loading-wheel"></div></div>
+</body>
+</html>
